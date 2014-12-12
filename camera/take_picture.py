@@ -5,7 +5,8 @@ import time
 
 
 def take_picture():
-    file_name = 'test001.jpg'
+    current_time = time.strftime("%Y-%m-%d_%H.%M.%S")
+    file_name = current_time + '.jpg'
 
     with picamera.PiCamera() as camera:
         camera.vflip = True
