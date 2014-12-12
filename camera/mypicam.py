@@ -14,9 +14,11 @@ def take_picture():
         time.sleep(2)
         camera.capture(file_name)
 
+    return file_name
+
 
 def main():
-    take_picture()
+    print take_picture()
 
 
 if __name__ == '__main__':
