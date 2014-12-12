@@ -1,7 +1,7 @@
 #!/usr/bin/python
 
 import picamera
-from time import sleep
+import time
 
 
 def take_picture():
