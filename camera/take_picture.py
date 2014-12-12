@@ -7,7 +7,7 @@ from time import sleep
 def take_picture():
     file_name = 'test001.jpg'
 
-    with picamera.PiCamera() as camera
+    with picamera.PiCamera() as camera:
         camera.vflip = True
         camera.start_preview()
         time.sleep(2)
