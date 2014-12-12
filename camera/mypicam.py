@@ -7,13 +7,13 @@ import os
 def take_picture(pic_path):
     current_time = time.strftime("%Y-%m-%d_%H.%M.%S")
     file_name = current_time + '.jpg'
-    os.path.join(pic_path + file_name)
+    output_file = os.path.join(pic_path + file_name)
 
     with picamera.PiCamera() as camera:
         camera.vflip = True
         camera.start_preview()
         time.sleep(2)
-        camera.capture(file_name)
+        camera.capture(output_file)
 
     return file_name
 
