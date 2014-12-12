@@ -9,11 +9,11 @@ app = Flask(__name__)
 def index():
     data = request.get_data()
     if data == 'SECRET_HERE':
+        mypicam.take_picture()
         print "Ok"
     else:
         print "Nope!"
 
-    mypicam.take_picture()
     return("Done")
 
 
