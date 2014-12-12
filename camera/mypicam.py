@@ -23,7 +23,7 @@ def take_picture():
 
 
 def upload_picture(pic_path):
-    subprocess.call([dropbox_uploader, 'upload', pic_path])
+    subprocess.call([dropbox_uploader, 'upload', pic_path, '.'])
 
 
 def main():
