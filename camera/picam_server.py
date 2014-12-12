@@ -2,6 +2,7 @@
 
 from flask import Flask, request
 import mypicam
+import os
 
 app = Flask(__name__)
 
@@ -9,7 +10,9 @@ app = Flask(__name__)
 def index():
     data = request.get_data()
     if data == 'SECRET_HERE':
-        mypicam.take_picture()
+        saved_pic = mypicam.take_picture()
+        mypicam.upload_picture(saved_pic)
+        os.remove(saved_pic)
         print "Ok"
     else:
         print "Nope!"
